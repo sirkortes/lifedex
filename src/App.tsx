@@ -1,8 +1,5 @@
 import './App.css'
-import Header from './components/Header/Header'
 import MainPage from './pages/MainPage/MainPage'
-import StatsRow from './components/Stats/StatsRow'
-import AddButton from './components/AddButton/AddButton'
 
 function App() {
   return (
@@ -12,10 +9,10 @@ function App() {
       </div>
 
       <div id='Dex' className='flex flex-auto flex-col justify-center container mx-auto shadow-md rounded-3xl'>
-        <Header />
-        <StatsRow />
+        {/* Not Logged In */}
+        {/* <LoginPage /> */}
+        {/* Logged In */}
         <MainPage />
-        <AddButton />
       </div>
 
       <div id='Bottom' className='flex flex-initial justify-center py-2'>
