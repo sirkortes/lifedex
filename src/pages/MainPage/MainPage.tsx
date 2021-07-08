@@ -3,11 +3,11 @@
 
 function MainPage() {
   return (
-    <section className='pt-4 px-8 border-l-8 border-r-8 border-gray-700 bg-red-400'>
+    <section className='py-4 px-8 border-l-8 border-r-8 border-gray-700 bg-red-400'>
       {/*metal frame */}
       <div className='border-4 border-gray-700 bg-gray-300 rounded-3xl px-2 pt-2 shadow'>
         {/* display window */}
-        <div className='h-56 border-4 border-gray-700 bg-blue-200 rounded-2xl'>
+        <div className='h-56 border-4 border-gray-700 bg-blue-300 rounded-2xl'>
           {/* no data intro display */}
           {/* data grid display */}
           {/* upload display */}
