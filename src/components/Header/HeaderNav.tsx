@@ -1,9 +1,12 @@
-import './Header.css'
-// import ProfileButton from '../ProfileButton/ProfileButton'
-function Head() {
+interface HeaderNavProps {
+  loggedIn: boolean
+  setLoggedIn: Function
+}
+
+function HeaderNav({ loggedIn, setLoggedIn }: HeaderNavProps) {
   return (
     <header className='flex rounded-t-3xl bg-red-400 border-8 border-gray-700 pr-4'>
-      <nav className='rounded-tl-2xl border-t-8 border-l-8 border-red-200 flex flex-1 pt-2 pl-4 pb-2'>
+      <nav className='rounded-tl-2xl border-t-8 border-l-8 border-red-200 border-opacity-60 flex flex-1 pt-2 pl-4 pb-2'>
         {/* Left */}
         <div className='flex flex-1'>
           <button
@@ -32,6 +35,7 @@ function Head() {
 
           {/* Log Out */}
           <button
+            onClick={() => setLoggedIn(false)}
             className='w-8 h-8 rounded-full border-4 border-gray-700
               bg-gradient-to-br from-red-100 via-red-400 to-red-600 
               hover:from-red-400 hover:to-red-600 hover:shadow-inner cursor-pointer'
@@ -42,4 +46,4 @@ function Head() {
   )
 }
 
-export default Head
+export default HeaderNav
