@@ -11,6 +11,7 @@ function HeaderNav({ loggedIn, setLoggedIn, setScreen }: HeaderNavProps) {
         {/* Left */}
         <div className='flex flex-1'>
           <button
+            onClick={() => setScreen('Profile')}
             className='bg-gradient-to-br from-blue-100 via-blue-400 to-blue-600 
                     hover:from-blue-400 hover:to-blue-600 hover:shadow-inner border-8 border-gray-700
                       font-medium text-white text-center text-2xl 
@@ -38,7 +39,10 @@ function HeaderNav({ loggedIn, setLoggedIn, setScreen }: HeaderNavProps) {
 
           {/* Log Out */}
           <button
-            onClick={() => setLoggedIn(false)}
+            onClick={() => {
+              setLoggedIn(false)
+              // setScreen('Welcome')
+            }}
             className='w-8 h-8 rounded-full border-4 border-gray-700
               bg-gradient-to-br from-red-100 via-red-400 to-red-600 
               hover:from-red-400 hover:to-red-600 hover:shadow-inner cursor-pointer'

@@ -14,14 +14,14 @@ function LoginPage({ loggedIn, setLoggedIn }: LoginPageProps) {
 
   return (
     <section
-      className={`flex justify-center min-h-full h-full w-full rounded-b-3xl border-b-8 border-l-8 border-r-8 border-gray-700 absolute  bottom-0 overflow-hidden ${
-        !loggedIn ? 'z-50' : 'z-0'
-      }`}>
+      id='LoginContainer'
+      className={`z-10 flex justify-center min-h-full h-full w-full rounded-b-3xl border-b-8 border-l-8 border-r-8 border-gray-700 absolute bottom-0 overflow-hidden pointer-events-none`}>
       {/* wrapper for hiding animation */}
       <div
         className={`flex justify-center absolute bg-red-400 w-full h-full transition-height ${
-          !loggedIn ? 'duration-300 ease-linear bottom-0' : 'duration-500 ease-in -bottom-full pointer-events-none'
-        }`}>
+          !loggedIn ? 'duration-300 ease-linear bottom-0' : 'duration-500 ease-in -bottom-full'
+        }`}
+        style={{ pointerEvents: 'all' }}>
         <div className='flex flex-auto flex-col justify-center items-center border-l-8 border-red-200 border-opacity-60'>
           {/* info container */}
           <div className='flex flex-auto py-2 flex-col justify-center'>
