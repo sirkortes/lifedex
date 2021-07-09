@@ -6,6 +6,7 @@ import HeaderNav from './components/Header/HeaderNav'
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
+  const [screen, setScreen] = useState('Data')
 
   return (
     <div className='flex flex-col container mx-auto h-screen px-2 md:p-6 lg:p-10'>
@@ -14,10 +15,10 @@ function App() {
       </div>
 
       <div id='Dex' className='relative flex flex-auto flex-col justify-end container mx-auto shadow-md rounded-3xl'>
-        <HeaderNav loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+        <HeaderNav loggedIn={loggedIn} setLoggedIn={setLoggedIn} setScreen={setScreen} />
         <div className='relative flex flex-col flex-auto justify-center'>
           {<LoginPage loggedIn={loggedIn} setLoggedIn={setLoggedIn} />}
-          <MainPage />
+          <MainPage screen={screen} setScreen={setScreen} />
         </div>
       </div>
 
