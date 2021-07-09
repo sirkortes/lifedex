@@ -23,7 +23,7 @@ function HeaderNav({ loggedIn, setLoggedIn, setScreen }: HeaderNavProps) {
         <div className='flex flex-1 items-center justify-around'>
           {/* Info Button */}
           <button
-            onClick={() => setScreen('About')}
+            onClick={() => setScreen('Welcome')}
             className='w-8 h-8 rounded-full border-4 border-gray-700
               bg-gradient-to-br from-yellow-100 via-yellow-400 to-yellow-600 
               hover:from-yellow-400  hover:to-yellow-600 hover:shadow-inner cursor-pointer '

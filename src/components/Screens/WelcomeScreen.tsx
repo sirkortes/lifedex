@@ -1,6 +1,6 @@
 function WelcomeScreen() {
   return (
-    <div className='flex-auto flex-col p-6 font-mono text-blue-500 text-opacity-60 overflow-auto'>
+    <div className='flex-auto flex-col p-6 font-mono text-blue-500 text-opacity-60 overflow-auto space-y-2'>
       <h2 className='flex justify-center text-center font-bold text-2xl'>WELCOME TO LIFEDEX</h2>
 
       <p>
@@ -8,9 +8,10 @@ function WelcomeScreen() {
         the things you encounter through life.
       </p>
       <p>
-        Entries are added to the Lifedex simply by capturing a photo of the item, which is analyzed by our ML models to
-        get descriptive information about the elements in the photo and stored for later reference. As you capture more
-        of the encounters you get, you level up with the experience you gain!
+        Entries are added to the Lifedex simply by capturing a photo of the item. The photo is analyzed by machine
+        learning models to extract information about the elements in the photo and they are stored for later reference.
+        As you capture more photos of all kinds of encounters through your journey, you will gain experience points and
+        level up!
       </p>
 
       <h2 className='flex justify-center font-bold text-lg'>
