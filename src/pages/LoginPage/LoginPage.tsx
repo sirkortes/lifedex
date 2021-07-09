@@ -1,25 +1,29 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 //  { ${ loggedIn ? '' : 'max-h-full h-full' }`}
 
+import { useState } from 'react'
+
 interface LoginPageProps {
   loggedIn: boolean
   setLoggedIn: Function
 }
 
 function LoginPage({ loggedIn, setLoggedIn }: LoginPageProps) {
-  // hover:h-0
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
   return (
-    <section className='flex justify-center h-full min-w-full w-full rounded-b-3xl border-b-8 border-l-8 border-r-8 border-gray-700 absolute  bottom-0 overflow-hidden'>
+    <section className='flex justify-center min-h-full h-full w-full rounded-b-3xl border-b-8 border-l-8 border-r-8 border-gray-700 absolute  bottom-0 overflow-hidden'>
       {/* wrapper for hiding animation */}
       <div
-        className={`flex overflow-hidden absolute bottom-0 bg-red-400 w-full h-full transition-height ${
-          !loggedIn ? 'duration-200 ease-linear bottom-0' : 'duration-500 ease-in -bottom-full'
+        className={`flex justify-center absolute bg-red-400 w-full h-full transition-height ${
+          !loggedIn ? 'duration-300 ease-linear bottom-0' : 'duration-500 ease-in -bottom-full'
         }`}>
-        <div className='flex flex-auto flex-col w-full justify-center align-middle items-center border-l-8 border-red-200 border-opacity-60'>
+        <div className='flex flex-auto flex-col justify-center items-center border-l-8 border-red-200 border-opacity-60'>
           {/* info container */}
-          <div className='flex h-1/3 py-2 flex-col justify-center'>
+          <div className='flex flex-auto py-2 flex-col justify-center'>
             {/* title */}
-            <div className='flex flex-auto flex-col justify-center text-center'>
+            <div className='flex flex-auto flex-col justify-center text-center align-middle'>
               <h1 className='flex justify-center text-center font-bold text-opacity-50 text-red-800 text-4xl font-mono'>
                 LIFEDEX
               </h1>
@@ -60,80 +64,81 @@ function LoginPage({ loggedIn, setLoggedIn }: LoginPageProps) {
               <span className='h-px w-16 bg-black opacity-20'></span>
             </div>
           </div>
-
           {/* form panel */}
-          <form
-            className='flex flex-auto h-1/3 flex-col justify-around align-middle items-center content-center px-3 sm:px4'
-            action='#'
-            method='POST'>
-            <input type='hidden' name='remember' value='true' />
+          <div className='flex flex-auto'>
+            <form
+              className='flex flex-auto flex-col justify-around align-middle items-center content-center px-3 sm:px4'
+              action='#'
+              method='POST'>
+              <input type='hidden' name='remember' value='true' />
 
-            {/* email input */}
-            <div className='flex flex-col relative'>
-              <div className='absolute right-1 bottom-2 mt-4'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  className='h-6 w-6 text-white'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke='currentColor'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth='2'
-                    d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'></path>
-                </svg>
+              {/* email input */}
+              <div className='flex flex-col relative'>
+                <div className='absolute right-1 bottom-2 mt-4'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    className='h-6 w-6 text-white'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke='currentColor'>
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'></path>
+                  </svg>
+                </div>
+
+                <label className='text-sm text-black text-opacity-50 tracking-wide'>Email</label>
+                <input
+                  className=' w-full text-base text-black text-opacity-90 p-2 border-b border-red-300 border-opacity-60 shadow-inner rounded-md bg-red-500 bg-opacity-40 focus:outline-none focus:border-red-200 placeholder-white placeholder-opacity-30'
+                  type='email'
+                  placeholder='mail@gmail.com'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
 
-              <label className='text-sm text-black text-opacity-50 tracking-wide'>Email</label>
-              <input
-                className=' w-full text-base text-black text-opacity-90 p-2 border-b border-red-300 border-opacity-60 shadow-inner rounded-md bg-red-500 bg-opacity-40 focus:outline-none focus:border-red-200'
-                type='email'
-                placeholder='mail@gmail.com'
-                value='mail@gmail.com'
-              />
-            </div>
+              {/* password input */}
+              <div className='flex flex-col content-center'>
+                <label className='text-sm text-black text-opacity-50 tracking-wide'>Password</label>
+                <input
+                  className='w-full content-center text-base text-black text-opacity-90 p-2 border-b border-red-300 border-opacity-60 shadow-inner rounded-md bg-red-500 bg-opacity-40 focus:outline-none focus:border-red-200 placeholder-white placeholder-opacity-30'
+                  type='password'
+                  placeholder='Enter your password'
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
 
-            {/* password input */}
-            <div className='flex flex-col content-center'>
-              <label className='text-sm text-black text-opacity-50 tracking-wide'>Password</label>
-              <input
-                className='w-full content-center text-base text-black text-opacity-90 p-2 border-b border-red-300 border-opacity-60 shadow-inner rounded-md bg-red-500 bg-opacity-40 focus:outline-none focus:border-red-200'
-                type='password'
-                placeholder='Enter your password'
-                value='*****|'
-              />
-            </div>
+              {/* forgot pass  */}
+              <div className='flex mt-0 text-sm'>
+                <a href='' className='font-medium text-black text-opacity-30 hover:text-opacity-100 mt-0'>
+                  Forgot your password?
+                </a>
+              </div>
 
-            {/* forgot pass  */}
-            <div className='flex mt-0 text-sm'>
-              <a href='' className='font-medium text-black text-opacity-30 hover:text-opacity-100 mt-0'>
-                Forgot your password?
-              </a>
-            </div>
+              {/* submit btn */}
+              <div className='flex w-full justify-center'>
+                <button
+                  onClick={() => setLoggedIn(true)}
+                  type='button'
+                  className='flex flex-auto justify-center bg-indigo-500 text-gray-100 pt-1 px-6 border-4 border-gray-700 rounded-full tracking-wide font-semibold focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow cursor-pointer transition ease-in duration-75'>
+                  <div className='flex flex-initial justify-center pt-1 pb-1 border-t-4 border-blue-200'>Sign in</div>
+                </button>
+              </div>
 
-            {/* submit btn */}
-            <div className='flex w-full justify-center'>
-              <button
-                onClick={() => setLoggedIn(true)}
-                type='button'
-                className='flex w-full justify-center bg-indigo-500 text-gray-100 pt-1 px-6 border-4 border-gray-700 rounded-full tracking-wide font-semibold focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow cursor-pointer transition ease-in duration-75'>
-                <div className='flex flex-initial justify-center pt-1 pb-1 border-t-4 border-blue-200'>Sign in</div>
-              </button>
-            </div>
-
-            {/* sign up block */}
-            <p className='flex flex-col items-center justify-center text-center text-sm text-black text-opacity-50'>
-              <span>Don't have an account?</span>
-              <a
-                href='#'
-                className='text-black text-opacity-50 hover:text-opacity-100 font-bold no-underline cursor-pointer transition ease-in duration-75'>
-                Sign up
-              </a>
-            </p>
-
-            {/*  */}
-          </form>
+              {/* sign up block */}
+              <p className='flex flex-col items-center justify-center text-center text-sm text-black text-opacity-50'>
+                <span>Don't have an account?</span>
+                <a
+                  href='#'
+                  className='text-black text-opacity-50 hover:text-opacity-100 font-bold no-underline cursor-pointer transition ease-in duration-75'>
+                  Sign up
+                </a>
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
