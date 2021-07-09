@@ -1,6 +1,8 @@
 function ProfileScreen() {
   return (
     <div className='flex-auto flex-col p-6 font-mono text-blue-600 text-opacity-60 overflow-auto space-y-2'>
+      <h2 className='flex justify-center text-center'>ACCOUNT</h2>
+
       {/* row */}
       <div className='flex flex-auto p-4 justify-between'>
         <div className='border-2 flex flex-col justify-start items-start'>

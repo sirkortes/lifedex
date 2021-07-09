@@ -1,7 +1,7 @@
 function ConfigScreen() {
   return (
-    <div className='flex-auto flex-col p-6 font-mono text-blue-500 text-opacity-60 overflow-auto space-y-2'>
-      <h2 className='flex justify-center text-center'>ACCOUNT PREFERENCES</h2>
+    <div className='flex-auto flex-col p-6 font-mono text-blue-600 text-opacity-60 overflow-auto space-y-2'>
+      <h2 className='flex justify-center text-center'>PREFERENCES</h2>
 
       <div className='border-2 flex justify-between'>
         <div className='span'>Name</div>
