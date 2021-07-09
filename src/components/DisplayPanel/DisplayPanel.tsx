@@ -1,6 +1,5 @@
 import DataScreen from '../Screens/DataScreen'
 import WelcomeScreen from './../Screens/WelcomeScreen'
-import AboutScreen from './../Screens/AboutScreen'
 import ProfileScreen from './../Screens/ProfileScreen'
 import UploadScreen from './../Screens/UploadScreen'
 import TicketScreen from './../Screens/TicketScreen'
@@ -28,7 +27,6 @@ function DisplayPanel({ screen, setScreen }: DisplayPanelProps) {
           align-middle border-4 border-gray-700 bg-blue-300 rounded-2xl'>
             {screen === 'Welcome' && <WelcomeScreen />}
             {screen === 'Data' && <DataScreen />}
-            {screen === 'About' && <AboutScreen />}
             {screen === 'Profile' && <ProfileScreen />}
             {screen === 'Config' && <ConfigScreen />}
             {screen === 'Upload' && <UploadScreen />}

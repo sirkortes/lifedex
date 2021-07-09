@@ -1,14 +1,37 @@
 function ConfigScreen() {
   return (
-    <div className='flex flex-auto flex-col p-6 font-mono text-blue-500 text-opacity-60 overflow-auto space-y-2'>
-      <div className='bg-blue-500 flex flex-initial flex-grow w-full h-2'>test</div>
-      <h2 className='flex flex-grow justify-center text-center'>CONFIG SCREEN</h2>
-      <div>Username</div>
-      <div>Email</div>
-      <div>Experience</div>
-      <div>Color Theme</div>
-      <div>Captured Data</div>
-      <div>-------------------------------------------------------------------------</div>
+    <div className='flex-auto flex-col p-6 font-mono text-blue-500 text-opacity-60 overflow-auto space-y-2'>
+      <h2 className='flex justify-center text-center'>ACCOUNT PREFERENCES</h2>
+
+      <div className='border-2 flex justify-between'>
+        <div className='span'>Name</div>
+        <div className='p2'>Field</div>
+      </div>
+
+      <div className='border-2 flex justify-between'>
+        <div className='span'>Level</div>
+        <div className='p2'>Field</div>
+      </div>
+
+      <div className='border-2 flex justify-between'>
+        <div className='span'>Email</div>
+        <div className='p2'>Field</div>
+      </div>
+
+      <div className='border-2 flex justify-between'>
+        <div className='span'>Experience</div>
+        <div className='p2'>Field</div>
+      </div>
+
+      <div className='border-2 flex justify-between'>
+        <div className='span'>Account Data</div>
+        <div className='p2'>Field</div>
+      </div>
+
+      <div className='border-2 flex justify-between'>
+        <div className='span'>Color Theme</div>
+        <div className='p2'>Field</div>
+      </div>
     </div>
   )
 }
