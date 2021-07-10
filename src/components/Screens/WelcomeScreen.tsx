@@ -1,6 +1,6 @@
 function WelcomeScreen() {
   return (
-    <div className='flex-auto flex-col p-6 font-mono text-blue-600 text-opacity-60 overflow-auto space-y-2'>
+    <div className='flex-auto flex-col p-2 font-mono text-blue-600 text-opacity-60 overflow-auto space-y-2'>
       <h2 className='flex justify-center text-center font-bold text-2xl'>WELCOME TO LIFEDEX</h2>
 
       <p>

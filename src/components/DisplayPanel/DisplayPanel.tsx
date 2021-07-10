@@ -24,7 +24,7 @@ function DisplayPanel({ screen, setScreen }: DisplayPanelProps) {
         border-4 border-gray-700 bg-gray-300 rounded-3xl px-2 py-2 shadow'>
           <div
             className='relative min-h-0 h-full top-0 flex flex-auto flex-col justify-center
-          align-middle border-4 border-gray-700 bg-blue-300 rounded-2xl'>
+          align-middle border-4 border-gray-700 bg-blue-300 rounded-2xl p-4'>
             {screen === 'Welcome' && <WelcomeScreen />}
             {screen === 'Data' && <DataScreen />}
             {screen === 'Profile' && <ProfileScreen />}
