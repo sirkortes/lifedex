@@ -7,6 +7,7 @@ import ConfigScreen from '../components/MainDisplay/ConfigScreen'
 import UploadScreen from '../components/MainDisplay/UploadScreen'
 import TicketScreen from '../components/MainDisplay/TicketScreen'
 import AuxStats from './../components/AuxDisplay/AuxStats'
+import { useState } from 'react'
 
 interface MainPageProps {
   screen: string
@@ -21,6 +22,8 @@ interface MainPageProps {
 // AuxTicket: progress bar + success status
 
 function MainPage({ screen, setScreen }: MainPageProps) {
+  const [selectedEntry, setSelectedEntry] = useState(null)
+
   return (
     <>
       <AuxDisplay>
@@ -35,7 +38,7 @@ function MainPage({ screen, setScreen }: MainPageProps) {
 
       <MainDisplay>
         {screen === 'About' && <AboutScreen />}
-        {screen === 'Data' && <DataScreen />}
+        {screen === 'Data' && <DataScreen {...{ selectedEntry, setSelectedEntry }} />}
         {screen === 'Profile' && <ProfileScreen />}
         {screen === 'Config' && <ConfigScreen />}
         {screen === 'Upload' && <UploadScreen />}

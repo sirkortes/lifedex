@@ -1,7 +1,11 @@
-import { useState } from 'react'
 import DataScreenItem from './DataScreenItem'
 
-function DataScreen() {
+interface DataScreenProps {
+  selectedEntry: number | null
+  setSelectedEntry: Function
+}
+
+function DataScreen({ selectedEntry, setSelectedEntry }: DataScreenProps) {
   const mockdata = [
     {
       date: '7/9/2021, 5:40:55 PM',
@@ -66,13 +70,12 @@ function DataScreen() {
       details: []
     }
   ]
-  const [selectedItem, setSelectedItem] = useState<number>()
   return (
     <div className='flex-auto flex-col justify-between p-2 font-mono text-blue-500 text-opacity-60 overflow-auto space-y-2'>
       {/* List of data items, figure out navigation to item page later */}
       <div className='flex flex-col flex-auto justify-start align-top space-y-4 pr-2'>
         {mockdata.map((item, id) => (
-          <DataScreenItem key={id} {...item} id={id} isOpen={selectedItem === id} setSelectedItem={setSelectedItem} />
+          <DataScreenItem key={id} {...item} id={id} isOpen={selectedEntry === id} setSelectedItem={setSelectedEntry} />
         ))}
       </div>
     </div>
