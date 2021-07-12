@@ -1,6 +1,6 @@
 import './App.css'
-import MainPage from './pages/MainPage/MainPage'
-import LoginPage from './pages/LoginPage/LoginPage'
+import MainPage from './pages/MainPage'
+import LoginPage from './pages/LoginPage'
 import { useState } from 'react'
 import HeaderNav from './components/Header/HeaderNav'
 
