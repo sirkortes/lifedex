@@ -1,4 +1,4 @@
-function WelcomeScreen() {
+function AboutScreen() {
   return (
     <div className='flex-auto flex-col p-2 font-mono text-blue-600 text-opacity-60 overflow-auto space-y-2'>
       <h2 className='flex justify-center text-center font-bold text-2xl'>WELCOME TO LIFEDEX</h2>
@@ -21,4 +21,4 @@ function WelcomeScreen() {
   )
 }
 
-export default WelcomeScreen
+export default AboutScreen
