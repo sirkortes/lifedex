@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/lifedex/static/css/main.cf7a7fc4.chunk.css",
-    "main.js": "/lifedex/static/js/main.f9838d67.chunk.js",
-    "main.js.map": "/lifedex/static/js/main.f9838d67.chunk.js.map",
+    "main.js": "/lifedex/static/js/main.20675ad5.chunk.js",
+    "main.js.map": "/lifedex/static/js/main.20675ad5.chunk.js.map",
     "runtime-main.js": "/lifedex/static/js/runtime-main.0d028e08.js",
     "runtime-main.js.map": "/lifedex/static/js/runtime-main.0d028e08.js.map",
     "static/js/2.8b0a5c81.chunk.js": "/lifedex/static/js/2.8b0a5c81.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0d028e08.js",
     "static/js/2.8b0a5c81.chunk.js",
     "static/css/main.cf7a7fc4.chunk.css",
-    "static/js/main.f9838d67.chunk.js"
+    "static/js/main.20675ad5.chunk.js"
   ]
 }
