@@ -6,7 +6,7 @@ import HeaderNav from './components/Header/HeaderNav'
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
-  const [screen, setScreen] = useState('Welcome')
+  const [screen, setScreen] = useState('About')
 
   return (
     <div className='flex flex-col min-h-screen h-screen min-w-full absolute top-0 px-2 md:p-6 lg:p-10 overflow-hidden'>
